@@ -1,13 +1,18 @@
-import AButton from "./components/AButton.vue";
+import './styles/index.css'
+import * as components from "./components";
 // Outros imports dos componentes podem ser adicionados aqui
 
 // Exporta os componentes individualmente
-export { AButton };
+export * from './components';
 
 // Exporta um objeto padrão para facilitar a instalação como plugin
 export default {
     install(app: any) {
-        // Registra os componentes globalmente
-        app.component("AButton", AButton);
+        for (const componentKey in components) {
+            const component = (components as any)[componentKey];
+            if (component?.name) {
+                app.component(component.name, component);
+            }
+        }
     }
 };

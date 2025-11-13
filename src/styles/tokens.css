@@ -1,0 +1,46 @@
+:root {
+    /* Cores */
+    --color-brand-primary-500: #3b82f6;
+    --color-brand-primary-600: #2563eb;
+    --color-brand-secondary-500: #8B5CF6;
+
+    --color-feedback-success-500: #10b981;
+    --color-feedback-warning-500: #f59e0b;
+    --color-feedback-error-500: #ef4444;
+
+    --color-neutral-100: #f1f5f9;
+    --color-neutral-500: #64748b;
+    --color-neutral-900: #0f172a;
+
+    --black: #000;
+    --white: #fff;
+
+    /* Tipografia */
+    --font-family: 'Inter', sans-serif;
+    --font-heading-1: 3rem;
+    --font-heading-2: 2.25rem;
+    --font-heading-3: 1.875rem;
+    --font-body-large: 1.125rem;
+    --font-body-regular: 1rem;
+    --font-caption: 0.875rem;
+
+    /* Espaçamento */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+
+    /* Bordas */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    --border-radius-full: 9999px;
+
+    /* Sombra */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}

@@ -1,8 +1,6 @@
 {
   "name": "inclulib",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
   "main": "dist/inclulib.umd.js",
   "module": "dist/inclulib.es.js",
   "types": "dist/index.d.ts",
@@ -22,5 +20,8 @@
     "typescript": "~5.9.3",
     "vite": "^7.2.2",
     "vue-tsc": "^3.1.3"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
   }
 }

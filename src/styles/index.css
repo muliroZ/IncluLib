@@ -1,0 +1,15 @@
+@import './tokens.css';
+
+/* Reset / normalização */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-neutral-100);
+  color: var(--black);
+}
+
+/* Estilos globais adicionais podem ser adicionados aqui */
