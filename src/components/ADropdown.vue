@@ -94,8 +94,8 @@ onBeforeUnmount(() => {
 
 .a-dropdown-btn {
   padding: 8px 12px;
-  background: var(--white);
-  border: 1px solid var(--color-neutral-500);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
   border-radius: var(--border-radius-sm);
   cursor: pointer;
 }
@@ -105,8 +105,8 @@ onBeforeUnmount(() => {
   padding: 4px 0;
   margin: 4px 0 0;
   position: absolute;
-  background: var(--color-brand-primary-500, #fff);
-  border: 1px solid var(--color-neutral-500);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
   border-radius: var(--border-radius-sm);
   width: 100%;
   z-index: 10;
@@ -118,7 +118,7 @@ onBeforeUnmount(() => {
 }
 
 .a-dropdown-item[aria-selected="true"] {
-  background: var(--color-brand-secondary-500);
-  color: var(--white);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
 }
 </style>

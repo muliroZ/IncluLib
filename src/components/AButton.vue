@@ -35,46 +35,46 @@ const ariaBusy = computed(() => props.loading)
 
 <style scoped>
 .a-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    padding: var(--spacing-md) calc(var(--spacing-md) * 2);
+  padding: var(--spacing-md) calc(var(--spacing-md) * 2);
 
-    background: var(--color-brand-primary-500);
-    color: var(--black);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
 
-    border: none;
-    border-radius: var(--radius-md);
-    font-size: var(--font-body-regular);
-    font-family: var(--font-family);
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-body-regular);
 
-    cursor: pointer;
-    transition: background 0.3s ease;
+  cursor: pointer;
+  transition: background var(--transition);
 }
 
 .a-btn:hover:not(:disabled) {
-    background: var(--color-brand-primary-600);
+  background: var(--color-primary-hover);
 }
 
 .a-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
+/* Ícone de carregamento */
 .loader {
-    border: 2px solid var(--black);
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    width: 1rem;
-    height: 1rem;
-    margin-right: var(--spacing-sm);
-    animation: spin 1s linear infinite;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--color-primary-text);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  margin-right: 8px;
+  animation: spin 0.7s linear infinite;
 }
 
 @keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>

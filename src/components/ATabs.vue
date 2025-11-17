@@ -68,7 +68,7 @@ function onKey(e: KeyboardEvent, index: number) {
 .a-tabs-list {
   display: flex;
   gap: 8px;
-  border-bottom: 2px solid var(--color-neutral-500);
+  border-bottom: 2px solid var(--color-border);
 }
 
 .a-tab {
@@ -79,7 +79,7 @@ function onKey(e: KeyboardEvent, index: number) {
 }
 
 .a-tab[aria-selected="true"] {
-  border-bottom: 2px solid var(--color-brand-primary-500);
+  border-bottom: 2px solid var(--color-primary);
   font-weight: bold;
 }
 </style>

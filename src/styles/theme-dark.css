@@ -1,0 +1,20 @@
+:root[data-theme="dark"] {
+  --color-bg: var(--color-neutral-900);
+  --color-bg-soft: var(--color-neutral-800);
+
+  --color-text-primary: var(--color-neutral-100);
+  --color-text-secondary: var(--color-neutral-300);
+
+  --color-border: var(--color-neutral-500);
+
+  --color-primary: var(--color-brand-primary-500);
+  --color-primary-text: var(--white);
+
+  --color-primary-hover: var(--color-brand-primary-600);
+
+  --color-text-subtle: var(--color-neutral-500);
+
+    --color-success: var(--color-feedback-success-500);
+    --color-warning: var(--color-feedback-warning-500);
+    --color-danger: var(--color-feedback-error-500);
+}

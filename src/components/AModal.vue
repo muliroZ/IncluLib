@@ -79,8 +79,8 @@ function onBackdrop(e: MouseEvent) {
 }
 
 .a-modal {
-  background: var(--color-brand-primary-500, #fff);
-  color: var(--black);
+  background: var(--color-bg, #fff);
+  color: var(--color-text-primary);
   border-radius: var(--border-radius-md);
   padding: 16px;
   width: min(500px, 90%);

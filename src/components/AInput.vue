@@ -87,7 +87,7 @@ const ariaDescribedBy = computed(() => {
 .a-input-label {
   display: block;
   margin-bottom: 4px;
-  font-size: var(--font-size-md);
+  font-size: var(--font-body-regular);
 }
 
 .a-input-wrapper {
@@ -97,7 +97,7 @@ const ariaDescribedBy = computed(() => {
 
   background: var(--color-bg, #fff);
   border: 1px solid var(--color-border, #cbd5e1);
-  border-radius: var(--radius-md);
+  border-radius: var(--border-radius-md);
   padding: var(--spacing-md);
 
   transition: border var(--transition);
@@ -112,7 +112,7 @@ const ariaDescribedBy = computed(() => {
   flex: 1;
   border: none;
   background: transparent;
-  font-size: var(--font-size-md);
+  font-size: var(--font-body-regular);
   outline: none;
 }
 
@@ -123,12 +123,12 @@ const ariaDescribedBy = computed(() => {
 .a-input-desc {
   margin-top: 4px;
   color: var(--color-text-subtle, #64748b);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-caption);
 }
 
 .a-input-error {
   margin-top: 4px;
   color: var(--color-danger, #ef4444);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-caption);
 }
 </style>

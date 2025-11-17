@@ -80,11 +80,11 @@ watch(
   width: 18px;
   height: 18px;
   border: 2px solid var(--color-border, #64748b);
-  border-radius: var(--radius-sm, 4px);
+  border-radius: var(--border-radius-sm, 4px);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-bg, white);
+  background: var(--color-bg, var(--white));
   transition: all var(--transition);
   color: transparent;
 }
@@ -95,7 +95,7 @@ watch(
 .a-checkbox-input[indeterminate] + .a-checkbox-box {
   background: var(--color-primary);
   border-color: var(--color-primary);
-  color: var(--color-primary-text, #fff);
+  color: var(--color-primary-text, var(--white));
 }
 
 .a-checkbox-input:focus-visible + .a-checkbox-box {
@@ -104,6 +104,6 @@ watch(
 }
 
 .a-checkbox-label {
-  font-size: var(--font-size-md);
+  font-size: var(--font-body-regular);
 }
 </style>
