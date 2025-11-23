@@ -12,11 +12,6 @@ export default defineConfig({
       allow: ['..', '.', '../']
     }
   },
-  resolve: {
-    alias: {
-      '@lib': path.resolve(__dirname, 'src'),
-    },
-  },
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),

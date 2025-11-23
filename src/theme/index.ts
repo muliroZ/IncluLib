@@ -1,38 +1,69 @@
-export type Theme = 'light' | 'dark'
+export type Theme = 'light' | 'dark';
 
-const THEME_STORAGE_KEY = 'ui-theme'
+const THEME_STORAGE_KEY = 'ui-theme' as const;
 
 // -----------------------------------------------------
-// Atribui o tema ao <html data-theme="">
+// Leitura segura do localStorage
 // -----------------------------------------------------
-export function setTheme(theme: Theme, save: boolean = true) {
-    document.documentElement.setAttribute('data-theme', theme)
+function safeGetLocalTheme(): Theme | null {
+    try {
+        const value = localStorage.getItem(THEME_STORAGE_KEY);
+        return value === 'light' || value === 'dark' ? value : null;
+    } catch {
+        return null; // storage indisponível
+    }
+}
+
+// -----------------------------------------------------
+// Escrita segura do localStorage
+// -----------------------------------------------------
+function safeSetLocalTheme(theme: Theme) {
+    try {
+        localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch {
+        /* ignora erros de storage */
+    }
+}
+
+// -----------------------------------------------------
+// Define tema no <html data-theme="">
+// -----------------------------------------------------
+export function setTheme(theme: Theme, save = true) {
+    document.documentElement.dataset.theme = theme;
 
     if (save) {
-        localStorage.setItem(THEME_STORAGE_KEY, theme)
+        safeSetLocalTheme(theme);
     }
 }
 
 // -----------------------------------------------------
-// Lê o tema atual do HTML ou do armazenamento
+// Lê tema salvo ou usa o tema preferido do sistema
 // -----------------------------------------------------
 export function getTheme(): Theme {
-    const stored = localStorage.getItem(THEME_STORAGE_KEY)
-    if (stored === 'light' || stored === 'dark') {
-        return stored
-    }
+    const stored = safeGetLocalTheme();
+    if (stored) return stored;
 
-    // Fallback: tenta usar preferência do sistema
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    return prefersDark ? 'dark' : 'light'
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return prefersDark ? 'dark' : 'light';
 }
 
 // -----------------------------------------------------
-// Alterna entre dark/light
+// Alterna entre 'light' e 'dark'
 // -----------------------------------------------------
 export function toggleTheme(): Theme {
-    const current = getTheme()
-    const next: Theme = current === 'dark' ? 'light' : 'dark'
-    setTheme(next)
-    return next
+    const next = getTheme() === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+    return next;
+}
+
+// -----------------------------------------------------
+// Mantém sincronizado com alteração do tema do sistema
+// (opcional — remove se não quiser)
+// -----------------------------------------------------
+export function enableSystemThemeSync() {
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+    media.addEventListener('change', () => {
+        const systemTheme: Theme = media.matches ? 'dark' : 'light';
+        setTheme(systemTheme);
+    });
 }

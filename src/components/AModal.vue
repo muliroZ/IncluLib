@@ -91,6 +91,13 @@ function onBackdrop(e: MouseEvent) {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--color-text-primary);
+}
+
+.a-modal-header h2 {
+  margin: 0;
+  font-size: var(--font-heading-2);
+  color: var(--color-text-primary);
 }
 
 .a-modal-close {
@@ -98,9 +105,11 @@ function onBackdrop(e: MouseEvent) {
   border: none;
   font-size: 20px;
   cursor: pointer;
+  color: var(--color-text-primary);
 }
 
 .a-modal-body {
   margin: 16px 0;
+  color: var(--color-text-subtle);
 }
 </style>

@@ -113,6 +113,7 @@ const ariaDescribedBy = computed(() => {
   border: none;
   background: transparent;
   font-size: var(--font-body-regular);
+  color: var(--color-text-primary);
   outline: none;
 }
 

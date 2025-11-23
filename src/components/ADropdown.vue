@@ -90,6 +90,7 @@ onBeforeUnmount(() => {
 .a-dropdown {
   position: relative;
   display: inline-block;
+  color: var(--color-text-secondary);
 }
 
 .a-dropdown-btn {
@@ -98,6 +99,7 @@ onBeforeUnmount(() => {
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-sm);
   cursor: pointer;
+  color: var(--color-text-primary);
 }
 
 .a-dropdown-menu {

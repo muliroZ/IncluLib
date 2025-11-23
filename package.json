@@ -1,40 +1,49 @@
 {
   "name": "inclulib",
   "description": "Biblioteca de componentes Vue para acessibilidade",
-  "keywords": ["vue", "components", "ui", "acessibilidade"],
+  "keywords": [
+    "vue",
+    "components",
+    "ui",
+    "acessibilidade"
+  ],
   "license": "MIT",
   "version": "1.0.0",
   "main": "dist/inclulib.umd.js",
   "module": "dist/inclulib.es.js",
   "types": "",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "cross-env PLAYGROUND=true vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.5.24"
+    "vue": "^3.5.0"
   },
   "devDependencies": {
     "@types/node": "^24.10.0",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.8.1",
+    "axe-core": "^4.11.0",
     "cross-env": "^7.0.3",
     "typescript": "~5.9.3",
     "vite": "^7.2.2",
+    "vue-axe": "^2.4.4",
     "vue-tsc": "^3.1.3"
   },
   "peerDependencies": {
     "vue": "^3.5.0"
   },
   "sideEffects": [
-  "**/*.css"
+    "**/*.css"
   ],
   "exports": {
-  ".": {
-    "import": "./dist/inclulib.es.js",
-    "require": "./dist/inclulib.umd.js"
+    ".": {
+      "import": "./dist/inclulib.es.js",
+      "require": "./dist/inclulib.umd.js"
     }
   }
 }
